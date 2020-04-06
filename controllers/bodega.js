@@ -2,7 +2,7 @@ const sede = require('../db_apis/bodega'); /*agregar operaciones de la base de d
 
 async function get(request, response, next){
     try{
-        response.status(200);
+        response.status(200).json("");
     }catch(error){
         next(error);
     }
@@ -10,7 +10,7 @@ async function get(request, response, next){
 
 async function post(request, response, next){
     try{
-        response.status(200);
+        response.status(200).json("");
     }catch(error){
         next(error);
     }
@@ -18,7 +18,7 @@ async function post(request, response, next){
 
 async function put(request, response, next){
     try{
-        response.status(200);
+        response.status(200).json("");
     }catch(error){
         next(error);
     }
@@ -26,7 +26,7 @@ async function put(request, response, next){
 
 async function del(request, response, next){
     try{
-        response.status(200);
+        response.status(200).json("");
     }catch(error){
         next(error);
     }
