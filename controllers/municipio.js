@@ -1,4 +1,4 @@
-const departamento = require('../db_apis/departamento');
+const departamento = require('../db_apis/municipio');
 
 async function get(req, res, next){
     try{

@@ -1,11 +1,11 @@
 const express = require('express');
 const router = new express.Router();
 
-const departamento = require('../controllers/departamento');
-const municipio = require('../controllers/municipio');
-const rol = require('../controllers/rol');
-const permiso = require('../controllers/permiso');
-const autorizacion = require('../controllers/autorizacion');
+const departamento = require('./controllers/departamento');
+const municipio = require('./controllers/municipio');
+const rol = require('./controllers/rol');
+const permiso = require('./controllers/permiso');
+const autorizacion = require('./controllers/autorizacion');
 
 router.route('/departamento/:id?')
     .get(departamento.get);

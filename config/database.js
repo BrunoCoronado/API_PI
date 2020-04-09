@@ -1,9 +1,10 @@
+
 module.exports = {
     pi_connection: {
-        host: 'aa1qiu80aq6mmqn.cfrhwnzwaldz.us-east-2.rds.amazonaws.com',//process.env.RDS_HOSTNAME,
-        user: 'BrunoCoronado',//process.env.RDS_USERNAME,
-        password: '23111997',//process.env.RDS_PASSWORD,
+        host: "db-practicas-intermedias.cclpncoggrn9.us-west-1.rds.amazonaws.com",//process.env.RDS_HOSTNAME,
+        user: 'admin',//process.env.RDS_USERNAME,
+        password: "Practicas_2020.",//process.env.RDS_PASSWORD,
         port: 3306,//process.env.RDS_PORT,
-        database: "ebdb"//process.env.RDS_DB_NAME
+        database: "main"//process.env.RDS_DB_NAME
     }
 }
