@@ -18,14 +18,24 @@ async function close(){
     await connection.end();
 }
 
-function executeQuery(query){
+function executeQuery(query, binds=[]){
     return new Promise(async (resolve, reject) => {
         try{
-            await connection.query(query, (err, result, fields) => {
+            await connection.query(query, binds, (err, result, fields) => {
                 resolve(result);
             });
+            connection.commit(function(err) {
+                if (err) { 
+                  connection.rollback(function() {
+                    throw err;
+                  });
+                }
+            });
         }catch(err){
-            reject(err);
+            //si algo falla le hacemos roll back
+            connection.rollback(function() {
+                reject(err);
+            });
         }
     });
 }
